@@ -95,3 +95,17 @@ If you want to add an experiment type you have to:
 option in the `__init__` of the class and the actual descriptor function as a member function of the class.
 2. If you want to define an evolution algorithm you can do it in `core/evolvers`
 4. Add the name you chose for the experiment in the list of possible choices in the parser in `scripts/run_experiment.py`
+
+---
+
+If you find this code useful and you use it in a project, please cite it:
+```
+@misc{NSPaolo2020,
+  author = {Paolo, Giuseppe},
+  title = {Novelty Search Gym},
+  year = {2020},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/GPaolo/novelty_search_gym}},
+}
+```
