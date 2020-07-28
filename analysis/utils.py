@@ -46,21 +46,6 @@ def get_grid(points, grid_parameters):
   occupied_grid[occupied_grid > 0] = 1
   return hist, occupied_grid
 
-def extract_exp_cov(exp_folder): # TODO needs to be improved
-  """
-  This function loads the trajectories and extract coverage and unif by generation
-  :param exp_folder: Folder of the experiment
-  :param gt_bd: Function to extract the GT_BD from the traj
-  :param grid_params: Parameters to calculate the grid
-  """
-  print("Working on exp: {}".format(exp_folder))
-  # Load archive traj and parameters
-  with open(os.path.join(exp_folder, 'archive_traj.pkl'), 'rb') as f:
-    trajs = pkl.load(f)
-  params = Params()
-  params.load(os.path.join(exp_folder, '_params.json'))
-  grid_params = registered_envs[params.env_name]['grid']
-
 def get_runs_list(path):
   """
   This function returns the list of run folders in the path, by verifying that they are in the right format
